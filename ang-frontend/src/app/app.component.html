@@ -1,0 +1,103 @@
+<!Doctype HTML>
+<html>
+
+    <title>
+        Expedia To Do page...
+    </title>
+
+    <body>
+    <div class ="page1" *ngIf="show">
+
+      <div class="apne">
+
+         <img class="logo" src="../assets/screenshots/front.png">
+         <img class="image" src="../assets/screenshots/3.png">
+         <img class="image" src="../assets/screenshots/4.png">
+         <img class="image" src="../assets/screenshots/5.png">
+         <img class="image" src="../assets/screenshots/6.png">
+         <img class="image" src="../assets/screenshots/7.png">
+         <img class="image" src="../assets/screenshots/8.png">
+         <img class="image" src="../assets/screenshots/9.png">
+         <img class="image" src="../assets/screenshots/10.png">
+         <img class="image" src="../assets/screenshots/11.png">
+         <img class="image" src="../assets/screenshots/12.png">
+         <img class="image" src="../assets/screenshots/13.png">
+         <img class="image" src="../assets/screenshots/14.png">
+         <img class="image" src="../assets/screenshots/15.png">
+         <img class="image" src="../assets/screenshots/16.png">
+         <img class="image" src="../assets/screenshots/17.png">
+      </div>
+
+      <input class="box" type="checkbox" style="margin-top:1000px" name="ch1" value="1"><br>
+      <input class="box" type="checkbox" [checked]="box2" style="margin-top:480px" name="ch2" value="2"><br>
+      <input class="box" type="checkbox" style="margin-top:420px" name="ch3" value="3"><br>
+      <input class="box" type="checkbox" [checked]="box4" style="margin-top:500px" name="ch4" value="4"><br>
+      <input class="box" type="checkbox" style="margin-top:500px" name="ch5" value="5"><br>
+      <input class="box" type="checkbox" style="margin-top:400px" name="ch6" value="6"><br>
+      <input class="box" type="checkbox" style="margin-top:500px" name="ch7" value="7"><br>
+      <input class="box" type="checkbox" [checked]="box8" style="margin-top:480px" name="ch8" value="8"><br>
+      <input class="box" type="checkbox" style="margin-top:450px" name="ch9" value="9"><br>
+      <input class="box" type="checkbox" style="margin-top:450px" name="ch10" value="10"><br>
+      <input class="box" type="checkbox" style="margin-top:450px" name="ch11" value="11"><br>
+      <input class="box" type="checkbox" style="margin-top:370px" name="ch12" value="12"><br>
+      <input class="box" type="checkbox" style="margin-top:370px" name="ch13" value="13"><br>
+      <input class="box" type="checkbox" style="margin-top:360px" name="ch14" value="14"><br>
+      <input class="box" type="checkbox" style="margin-top:380px" name="ch15" value="15"><br>
+      <input class="box" type="checkbox" [checked]="box16" style="margin-top:480px" name="ch16" value="16"><br>
+      <input class="box" type="checkbox" style="margin-top:490px;margin-bottom: 460px" name="ch17" value="17"><br>
+
+      <div class="apne2">
+      <button type="button" class="btn" (click)="createMethod()">Create And view Itinerary</button>
+      </div>
+
+    </div>
+
+    <div class="page2" *ngIf="!show" >
+       <div class ="apne3">
+         <img class="logo" src="../assets/screenshots/front2.png">
+         <h2 style="font-size: 45px; text-decoration: underline;color: deepskyblue">Here are the places in your Itinerary</h2>
+         <p *ngIf="strikeFlag">1. Small-group Delhi food walking tour</p> <p style="text-decoration: line-through;font-weight: bold" *ngIf="!strikeFlag">Small-group Delhi food walking tour</p>
+         <select *ngIf="strikeFlag">
+           <option value="volvo">Day 1</option>
+           <option value="saab">Day 2</option>
+           <option value="mercedes">Day 3</option>
+         </select><br>
+         <p *ngIf="!strikeFlag">1. Taj mahal And Agra Fort: private Sunrise tour from Delhi</p>
+         <select *ngIf="!strikeFlag">
+           <option value="volvo">Day 1</option>
+           <option value="saab">Day 2</option>
+           <option value="mercedes">Day 3</option>
+         </select><br>
+         <p>2. Jaipur Full day Private Tour From Delhi - All Inclusive </p>
+         <select>
+           <option value="volvo">Day 1</option>
+           <option value="saab">Day 2</option>
+           <option value="mercedes">Day 3</option>
+         </select><br>
+         <p>3. Old and new delhi private full day tour </p>
+         <select>
+           <option value="volvo">Day 1</option>
+           <option value="saab">Day 2</option>
+           <option value="mercedes">Day 3</option>
+         </select><br>
+         <p>4. Same day round trip to taj mahal, agra fort from new delhi</p>
+         <select>
+           <option value="volvo">Day 1</option>
+           <option value="saab">Day 2</option>
+           <option value="mercedes">Day 3</option>
+         </select><br><br>
+<!--         <button type="button" (click)="showCall()">Edit Dates</button> <br>   <img class="editDates" *ngIf="!showCal" src="../assets/screenshots/date.png"> <br>-->
+         <button type="button" (click)="editLoc()">Edit Locations</button><br><br>
+         <button type="button" (click)="shareWithFriends()">Share with friend</button><br><br>
+         <div class="sendMail" *ngIf="sendMail">
+         <p class="a001">Your Name :</p> <input type="text" name="name"><br>
+         <p class="a001">Friend's E-mail :</p> <input type="email"><br><br>
+         <button type="button" style="width:400px;margin-left: 0px;background-color: red;border-radius: 2px" (click)="sendEmail()"> Send </button><br><br>
+         </div>
+         <button type="button" (click)="clearAll()">Clear and Return</button>
+       </div>
+    </div>
+
+    </body>
+
+</html>
